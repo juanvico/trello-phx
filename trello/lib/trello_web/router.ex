@@ -24,5 +24,6 @@ defmodule TrelloWeb.Router do
     pipe_through :api
 
     resources "/boards", BoardController, only: [:create, :index, :show]
+    resources "/lists/:list_id/cards", CardController, only: [:create]
   end
 end

@@ -2,11 +2,12 @@ defmodule Trello.BoardList do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Trello.Board
+  alias Trello.{Board, Card, Repo}
 
   schema "board_lists" do
     field :title, :string
     belongs_to :board, Board
+    has_many :card, Card
 
     timestamps()
   end
