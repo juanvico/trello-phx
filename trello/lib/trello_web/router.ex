@@ -20,7 +20,9 @@ defmodule TrelloWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", TrelloWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", TrelloWeb do
+    pipe_through :api
+
+    resources "/boards", BoardController, only: [:create, :index, :show]
+  end
 end

@@ -2,7 +2,7 @@ use Mix.Config
 
 # Configure your database
 config :trello, Trello.Repo,
-  username: "postgres",
+  username: "juanvico",
   password: "postgres",
   database: "trello_test",
   hostname: "localhost",
